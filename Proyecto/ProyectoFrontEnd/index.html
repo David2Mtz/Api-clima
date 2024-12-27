@@ -103,41 +103,34 @@
 
         <form class="formulario">
             <fieldset>
-                <legend>Contactanos llenando todos los campos</legend>
+                <legend>Contactános llenando todos los campos</legend>
 
                 <div class="contenedor-campos">
                     <div class="campo">
-                        <label>Nombre
-                            <input type="text" placeholder="Tu Nombre" name="">
-                        </label>
+                        <label>Nombre</label>
+                        <input class="input-text" type="text" placeholder="Tu Nombre">
                     </div>
 
                     <div class="campo">
-                        <label>Teléfono
-                            <input type="tel" placeholder="Tu Teléfono">
-                        </label>
+                        <label>Teléfono</label>
+                        <input class="input-text" type="tel" placeholder="Tu Teléfono">
                     </div>
 
                     <div class="campo">
-                        <label>Correo
-                            <input type="email" placeholder="Tu Correo">
-                        </label>
+                        <label>Correo</label>
+                        <input class="input-text" type="email" placeholder="Tu Email">
                     </div>
-
+            
                     <div class="campo">
-                        <label>Mensaje
-                            <textarea name=""  cols="30" rows="10"></textarea>
-                        </label>
+                        <label>Mensaje</label>
+                        <textarea class="input-text"></textarea>
                     </div>
-                </div>
+                </div> <!-- .contenedor-campos -->
 
-                <div>
-                    <input type="submit" value="Enviar">
-                </div>
             </fieldset>
-
-
-
+            <div class="alinear-derecha flex">
+                <input class="boton w-sm-100" type="submit" value="Enviar">
+            </div>
         </form>
 
     </section>
