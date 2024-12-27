@@ -2,10 +2,11 @@ const express = require('express'),
 app = express(),
 bodyParser  = require("body-parser");
 const cors= require('cors');
+const path = require('path');
 
-const httpPort = "8089";
+const httpPort = process.env.PORT || 8089;
 
-const index  = require('./index');
+const index = require('./index');
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -20,6 +21,13 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Methods','GET, POST, OPTIONS, PUT, DELETE');
     res.header('Allow','GET, POST, OPTIONS, PUT, DELETE');
     next();
+});
+
+// Servir archivos estáticos
+app.use(express.static(path.join(__dirname, 'ProyectoFrontEnd')));
+// Ruta principal para servir index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'ProyectoFrontEnd', 'index.html'));
 });
 
 const api = express.Router();
