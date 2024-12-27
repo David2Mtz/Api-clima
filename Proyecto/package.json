@@ -1,0 +1,26 @@
+{
+  "name": "ProyectoBackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "axios": "^1.6.2",
+    "connect-multiparty": "^2.2.0",
+    "cors": "^2.8.5",
+    "decompress-zip": "^0.3.3",
+    "express": "^4.18.2",
+    "fs": "0.0.1-security",
+    "iconv": "^3.0.1",
+    "jszip": "^3.10.1",
+    "multipart": "^0.1.5",
+    "zlib": "^1.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ProyectoWeb</title>
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+    <h1 class="titulo">Sistema Climatológico <span>En línea</span></h1>
+</header>
+
+<div class="nav-bg">
+    <nav class="navegacion-principal contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="integrantes.html">Sobre Nosotros</a>
+        <a href="recurso.html" onclick datas() >Recursos</a>
+    </nav>
+</div>
+
+<section class="hero">
+    <div class="contenido-hero">
+        <h2 >Información Climatológica</h2>
+
+        <div class="ubicacion">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffc107" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+            </svg>
+            <p>Localizar mi estado</p>
+
+        </div>
+
+        <a class="boton" href="mapa.html">Iniciar</a>
+    </div>
+</section>
+<main class="contenedor sombra">
+    <h2>Herramientas</h2>
+    <div class="servicios">
+
+        <section class="servicio">
+            <h3>Tu localidad</h3>
+            <div class="iconos">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5" />
+                    <path d="M9 4v13" />
+                    <path d="M15 7v5.5" />
+                    <path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" />
+                    <path d="M19 18v.01" />
+                </svg>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, sapiente!</p>
+        </section>
+
+        <section class="servicio">
+            <h3>Estado del Clima</h3>
+            <div class="iconos">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-temperature-celsius" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M6 8m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                    <path d="M20 9a3 3 0 0 0 -3 -3h-1a3 3 0 0 0 -3 3v6a3 3 0 0 0 3 3h1a3 3 0 0 0 3 -3" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878" />
+                </svg>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, sapiente!</p>
+        </section>
+
+        <section class="servicio">
+            <h3>Humedad</h3>
+            <div class="iconos">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-droplet-half-2-filled" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M13.905 2.923l.098 .135l4.92 7.306a7.566 7.566 0 0 1 1.043 3.167l.024 .326c.007 .047 .01 .094 .01 .143l-.002 .06c.056 2.3 -.944 4.582 -2.87 6.14c-2.969 2.402 -7.286 2.402 -10.255 0c-1.904 -1.54 -2.904 -3.787 -2.865 -6.071a1.052 1.052 0 0 1 .013 -.333a7.66 7.66 0 0 1 .913 -3.176l.172 -.302l4.893 -7.26c.185 -.275 .426 -.509 .709 -.686c1.055 -.66 2.446 -.413 3.197 .55zm-2.06 1.107l-.077 .038l-.041 .03l-.037 .036l-.033 .042l-4.863 7.214a5.607 5.607 0 0 0 -.651 1.61h11.723a5.444 5.444 0 0 0 -.49 -1.313l-.141 -.251l-4.891 -7.261a.428 .428 0 0 0 -.5 -.145z" stroke-width="0" fill="currentColor" />
+                </svg>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, sapiente!</p>
+        </section>
+
+    </div>
+
+
+    <section>
+        <h2>Contacto</h2>
+
+        <form class="formulario">
+            <fieldset>
+                <legend>Contactanos llenando todos los campos</legend>
+
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label>Nombre
+                            <input type="text" placeholder="Tu Nombre" name="">
+                        </label>
+                    </div>
+
+                    <div class="campo">
+                        <label>Teléfono
+                            <input type="tel" placeholder="Tu Teléfono">
+                        </label>
+                    </div>
+
+                    <div class="campo">
+                        <label>Correo
+                            <input type="email" placeholder="Tu Correo">
+                        </label>
+                    </div>
+
+                    <div class="campo">
+                        <label>Mensaje
+                            <textarea name=""  cols="30" rows="10"></textarea>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
+            </fieldset>
+
+
+
+        </form>
+
+    </section>
+</main>
+<footer>
+    <p class="creditos">Todos los derechos reservados. <br><b>@Equipo: Luis David Martínez Martínez, Marco Flores Vicencio.</b></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,378 @@
+:root {
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --gris-claro: #DFE9F3;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 16px; /* 1 REM =  10 PX*/
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--gris-claro) 0%, var(--blanco) 100%);
+}
+footer{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h1 {
+    font-size: 3.8rem;
+}
+
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+.titulo span {
+    font-size: 2rem;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.nav-bg {
+    background-color: var(--secundario);
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.navegacion-principal a {
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+.hero{
+    background-image: url("../img/hero.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+
+    /*Alinear verticaal y horizontalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .boton {
+        width: auto;
+    }
+
+    .servicios {
+        display: grid;
+        grid-template-columns:repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+.contenedor-campos {
+
+}
+
+.campo {
+
+}
+.mapa-info {
+    display: grid;
+    grid-template-columns:2fr 1fr;
+}
+.mapaMx{
+    width: auto;
+    height: auto;
+}
+
+.mapaMx path {
+    fill: var( --gris-claro);
+    stroke: var(--gris);
+    stroke-width: 2px;
+}
+
+.mapaMx :hover {
+    fill: var(--primario);
+}
+
+.creditos {
+    text-align: center;
+}
+
+.cajas{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#info_clima{
+    display: none;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.dias{
+    justify-content: center;
+    column-gap: 3rem;
+    grid-row-gap: 3rem;
+    color: var(--blanco);
+}
+
+.cajadia{
+    background-color: var(--secundario);
+}
+
+#contenedor_principal{
+    max-width: 140rem;
+}
+
+#contenedor_interaccion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    max-width: 26rem;
+    height: 20rem;
+    overflow-x: auto;
+}
+.wrapper > div {
+    margin-right: 3rem; /* Agrega un margen derecho entre los elementos */
+    text-align: center;
+}
+
+.items{
+
+    font-size: 60%;
+}
+.texto{
+    text-align: justify;
+    letter-spacing: 1px;
+}
+.integrantes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.circulo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Hace que el borde sea redondo */
+    overflow: hidden; /* Oculta las partes de la imagen que estén fuera del círculo */
+    border: 2px solid #000; /* Borde de 2px negro */
+}
+
+.circulo img {
+    width: 100%; /* La imagen ocupa el 100% del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Para eliminar el espacio debajo de la imagen */
+}
+
+.nombre {
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Espacio entre la imagen y el párrafo */
+}
+
+.padre{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+.creditos{
+    padding-bottom: 1rem;
+}
+@media (max-width: 767px){
+        html {
+            font-size: 65%;
+        }
+
+        .boton {
+            width: auto;
+        }
+
+        .servicios {
+            display: flex;
+            flex-direction: column;
+            column-gap: 1rem;
+        }
+
+        .mapa-info{
+            display: flex;
+            flex-direction: column;
+            column-gap: 1rem;
+        }
+        .mapaMx{
+            min-width: 30rem;
+            height: auto;
+        }
+        .dias{
+            flex-direction: column;
+            margin-top: 4rem;
+            column-gap: 2rem;
+        }
+        .cajadia{
+            max-width: 40rem;
+
+        }
+        .integrantes{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+}
+    @media screen and (min-width: 768px) and (max-width: 1439px){
+        .padre{
+            max-width: 75rem;
+        }
+        .mapa-info{
+            display: flex;
+            flex-direction: column;
+            column-gap: 1rem;
+        }
+        .mapaMx{
+            min-width: 30rem;
+            height: auto;
+        }
+        .dias{
+            flex-direction: column;
+            margin-top: 4rem;
+            column-gap: 2rem;
+        }
+        .cajadia{
+            min-width: 60rem;
+
+        }
+        .wrapper{
+            max-width: 55rem;
+        }
+    }

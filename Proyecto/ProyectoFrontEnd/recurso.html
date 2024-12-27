@@ -1,0 +1,72 @@
+<!doctype html>
+    <html lang="es">
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ProyectoWeb</title>
+
+        <link rel="preload" href="css/normalize.css" as="style">
+        <link rel="stylesheet" href="css/normalize.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="preload" href="css/styles.css" as="style">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body onload="dataS()">
+    <header>
+        <h1 class="titulo">Sistema Climatológico <span>En línea</span></h1>
+    </header>
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="integrantes.html">Sobre Nosotros</a>
+            <a href="recurso.html">Recursos</a>
+        </nav>
+    </div>
+    <main class="contenedor sombra padre">
+        <section class="Recursos">
+            <div class="Datos">
+                <h3>Recursos</h3>
+                <div id = "stringClima" style = "overflow-x : auto; overflow-y : hidden">
+
+                </div>
+            </div>
+        </section>
+        <script>
+            async function dataS(){
+                let url = 'http://localhost:8089/api/clima/data-string';
+                let ClimaDatos = "";    
+                let contenedor = $('#stringClima');
+                let request = {
+                    method: 'GET',
+                    mode: 'cors'
+                };
+                try{
+                    ClimaDatos = await fetch(url,request)
+                    .then(response => response.json())
+                    .then(mun =>{
+                        
+                        return JSON.stringify(mun);
+                });
+                }catch(e){
+                    console.log("Error al obtener los municipios: ",e);
+                    
+                }
+                //console.log("data", JSON.stringify(ClimaDatos));
+                console.log("datos", contenedor);
+                contenedor.append(ClimaDatos)
+            }
+        </script>
+    </main>
+    <footer>
+        <p class="creditos">Todos los derechos reservados. <br><b>@Equipo: Luis David Martínez Martínez, Marco Flores Vicencio.</b></p>
+    </footer>
+
+    </body>
+    </html>
