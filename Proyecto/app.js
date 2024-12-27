@@ -4,7 +4,7 @@ bodyParser  = require("body-parser");
 const cors= require('cors');
 const path = require('path');
 
-const httpPort = "8089";
+const httpPort = process.env.PORT || 8089;
 
 const index = require('./index');
 
