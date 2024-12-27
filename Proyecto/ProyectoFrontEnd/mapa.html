@@ -275,7 +275,10 @@
                 let estadoSeleccionado = $(obj).attr("id_es")
                 actualizarEstadoSeleccionado(estadoSeleccionado)
                 
-                let url = `http://localhost:8089/api/clima/municipios-estado?id_es=${id_e}`;
+                //let url = `http://localhost:8089/api/clima/municipios-estado?id_es=${id_e}`;
+                //https://sistema-climatologico.onrender.com/mapa.html
+                let url = `https://sistema-climatologico.onrender.com/api/clima/municipios-estado?id_es=${id_e}`;
+
 
                 let request = {
                     method: 'GET',
@@ -332,7 +335,8 @@
                     return;
                 }
 
-                let url = `http://localhost:8089/api/clima/clima-mexico?id_es=${id_es}&id_mun=${id_mun}`;
+                let url = `http://sistema-climatologico.onrender.com/api/clima/clima-mexico?id_es=${id_es}&id_mun=${id_mun}`;
+                
 
                 let request = {
                     method: 'GET',
