@@ -4,6 +4,7 @@ const express = require('express');
 const axios = require('axios');
 const api = express.Router();
 const fs = require("fs");
+const path = require('path');
 const zlib = require('zlib');
 //const { promises } = require('dns');
 //const { rejects } = require('assert');
@@ -58,8 +59,12 @@ async function climaMexico(req,res){
     console.log(tag,filename)
   
     
-    dir=`${__dirname}\\apiFile-clima`+ '\\' + filename;
-    dir2 = `${__dirname}\\apiFile-clima\\DailyForecast_MX`;
+    const dataDir = path.join(__dirname, 'apiFile-clima');
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+    dir = path.join(dataDir, filename);
+    dir2 = path.join(dataDir, 'DailyForecast_MX');
   
     try{
       fs.writeFileSync(dir,jsonClima.data,'base64');
@@ -117,8 +122,12 @@ async function municipiosxEstado(req,res){
   console.log(tag,filename)
 
   
-  dir=`${__dirname}\\apiFile-clima`+ '\\' + filename;
-  dir2 = `${__dirname}\\apiFile-clima\\DailyForecast_MX`;
+  const dataDir = path.join(__dirname, 'apiFile-clima');
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+  dir = path.join(dataDir, filename);
+  dir2 = path.join(dataDir, 'DailyForecast_MX');
 
   try{
     fs.writeFileSync(dir,jsonClima.data,'base64');
@@ -143,8 +152,8 @@ async function descomprimirArchivoGZ(fileName,dir,filtro){
   let JSON_clima = "";
   let bandera = filtro.type || "";
 
-  let rutaArchivo = `${__dirname}\\apiFile-clima\\` + fileName;
-  let rutaDestino = `${__dirname}\\apiFile-clima\\DailyForecast_MX`;
+  let rutaArchivo = path.join(__dirname, 'apiFile-clima', fileName);
+  let rutaDestino = path.join(__dirname, 'apiFile-clima', 'DailyForecast_MX');
   
   let streamLectura = fs.createReadStream(rutaArchivo);
   let streamEscitura = fs.createWriteStream(rutaDestino);
@@ -253,8 +262,12 @@ async function dataString(req,res){
   console.log(tag,filename)
 
   
-  dir=`${__dirname}\\apiFile-clima`+ '\\' + filename;
-  dir2 = `${__dirname}\\apiFile-clima\\DailyForecast_MX`;
+  const dataDir = path.join(__dirname, 'apiFile-clima');
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+  dir = path.join(dataDir, filename);
+  dir2 = path.join(dataDir, 'DailyForecast_MX');
 
   try{
     fs.writeFileSync(dir,jsonClima.data,'base64');
